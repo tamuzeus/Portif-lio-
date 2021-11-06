@@ -1,6 +1,7 @@
 html, body{
   padding: 0%;
   margin: 0%;
+  box-sizing: border-box;
 }
 
 *{
@@ -74,13 +75,22 @@ nav{
 margin: 10px;
 padding: 10px;
 text-align: justify;
-display: flex;
+display: grid;
+grid-template-columns: auto auto;
+grid-auto-rows: auto auto;
 }
 
-#areasm > h2{
-  text-align: center;
+#titlesm{
+text-align: center;
 }
 
+#areasm{
+grid-row: 2;
+}
+
+#astroplanet{
+grid-row: 2;
+}
 
 #astronaut{
   height: 16rem;
@@ -101,7 +111,7 @@ display: flex;
   display: inline-block;
   background-color: black;
   transition: 1s;
-  width: 20rem;
+  width: 13rem;
   text-align: center;
 }
 
@@ -116,85 +126,51 @@ background: rgba(150, 21, 236, 0.521);
   margin: 10px;
   padding: 10px;
   border-radius: 1rem;
+
   display: grid;
-  grid-auto-rows: auto;
+  grid-template-columns: auto auto auto auto;
+  grid-auto-rows: 5rem auto auto;
   justify-content: center;
+
 }
 
-#Skills > #texths{
-  
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  grid-column: 1/span 3;
-  justify-content: center;
+#tittleskill{
+  grid-row: 1;
+  grid-column: 1/-1;
+  justify-self: center;
 }
-
-#Skills > #textsf{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  grid-column: 4/span 6;
-  justify-content: center;
-}
-
-
 
 #Hardskills{
-margin: 0;
-display: flex;
-grid-row: 2 / span 4;
+  grid-row: 2;
+  grid-column: 1;
 }
 
-#JS{
-    margin: 0;
-    padding: 1.5rem 0 2rem 5rem;
-    list-style: none;
-    background-image: url("img/icons/js.png");
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 4em;
-  }
-
-#HTML5{
-    margin: 0;
-    padding: 1.5rem 0 2rem 5rem;
-    list-style: none;
-    background-image: url("img/icons/html.png");
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 4em;
-}
-#CSS3{
-    margin: 0;
-    padding: 1.5rem 0 2rem 5rem;
-    list-style: none;
-    background-image: url("img/icons/css.png");
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 4em;
-}
-#Ingles{
-    margin: 0;
-    padding: 1.5rem 0 2rem 5rem;
-    list-style: none;
-    background-image: url("img/icons/talk.png");
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 4em;
+#astronautlap{
+  grid-row: 2;
+  grid-column: 2;
 }
 
 #laptop{
-  height: 16rem;
-  width: 16rem;
+height: 16rem;
+width: 16rem;
+
 }
 
 
 #Softskills{
-  margin: 0;
-  display: flex;
-  grid-row: 2 / span 4;
+  grid-row: 2;
+  grid-column: 3;
+  align-self: center;
+}
+
+#astronauttalk{
+  grid-row: 2;
   grid-column: 4;
+}
+
+#talk{
+  height: 16rem;
+  width: 16rem;
 }
 
 @counter-style list{
@@ -209,39 +185,102 @@ grid-row: 2 / span 4;
 }
 
 #ulss > li{
-  margin-top: 1.3rem;
+  margin-top: 1.2rem;
 }
 
-#talk{
-  height: 16rem;
-  width: 16rem;
+#JS{
+  margin: 0;
+  padding: 1.5rem 0 2rem 5rem;
+  list-style: none;
+  background-image: url("img/icons/js.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 4em;
+}
+
+#HTML5{
+  margin: 0;
+  padding: 1.5rem 0 2rem 5rem;
+  list-style: none;
+  background-image: url("img/icons/html.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 4em;
+}
+#CSS3{
+  margin: 0;
+  padding: 1.5rem 0 2rem 5rem;
+  list-style: none;
+  background-image: url("img/icons/css.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 4em;
+}
+#Ingles{
+  margin: 0;
+  padding: 1.5rem 0 2rem 5rem;
+  list-style: none;
+  background-image: url("img/icons/talk.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 4em;
 }
 
 
 /* Contatos */
 
 #Contato{
-
 margin: 10px;
 padding: 10px;
 
 display: grid;
-grid-template-columns: 2 auto;
-grid-template-rows: 2 auto;
+grid-template-columns: auto;
+grid-auto-rows: 3rem auto;
 }
 
-#Contato > h2{
+#Contato>h2{
   text-align: center;
 }
 
 #Cttarea{
-  grid-row: 2 / span 2
+  grid-row: 2;
+  grid-column: 1;
+  
+}
+
+#astronauts{
+  grid-row: 2;
+  grid-column: 1;
+  justify-self: center;
+  display: grid;
+  width: 35rem;
+}
+
+#astronautdab{
+  grid-row: 2;
+  grid-column: 1;
+  justify-self: center;
+}
+
+#dab{
+  height: 16rem;
+  width: 16rem;
+}
+
+#astronautyoga{
+  grid-row: 2;
+  grid-column: 1;
+  justify-self: end;
+}
+
+#yoga{
+  height: 16rem;
+  width: 16rem;
 }
 
 #Cttarea > ul{
   list-style: none;
 }
-
 
 #whats{
     margin: 0;
@@ -284,12 +323,6 @@ grid-template-rows: 2 auto;
     
 }
 
-
-#dab{
-  height: 16rem;
-  width: 16rem;
-  grid-row: 2/span 2
-}
 
 /* Footer */
 
@@ -344,55 +377,59 @@ footer > p{
 }
 
 
-@media only screen and (max-width: 835px){
+@media only screen and (max-width: 600px){
   
-  html, body{
-    width: 100vw;
-  }
 
   /* sobre mim */
   #sobremim{
-    display: grid;
-    }
+  
+  }
   #astronaut{
-    justify-self: center;
+    
   }
 
 
   /* skills */
 
   #Skills{
-    display: grid;
+  
+  
   }
   
   #Skills > #texths{
-  display: flex;
-  
-  justify-content: center;
+    
   }
   
   #Skills > #textsf{
-  display: flex;
-  
-  justify-content: center;
+   
   }
-  
   
   
   #Hardskills{
-    display: block;
+    
+  }
+
+  #laptop{
+    
   }
 
   #Softskills{
-    display: block;
-    margin-top: 1rem;
+    
   }
 
+  #talk{
+   
+  }
 
   /* Contato */
 
-  #dab{
-  align-self: center;
+  #Contato{
+  
   }
+    
+
+#dab{
+  
+}
 
 }
