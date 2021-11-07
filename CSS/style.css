@@ -388,6 +388,7 @@ footer > p{
   }
   #astroplanet{
     grid-row: 3;
+    justify-self: center;
   }
 
 
