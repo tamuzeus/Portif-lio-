@@ -74,7 +74,7 @@ nav{
 #sobremim{
 margin: 10px;
 padding: 10px;
-text-align: justify;
+text-align:start;
 display: grid;
 grid-template-columns: auto auto;
 grid-auto-rows: auto auto;
@@ -86,6 +86,7 @@ text-align: center;
 
 #areasm{
 grid-row: 2;
+justify-self: center;
 }
 
 #astroplanet{
@@ -129,7 +130,7 @@ background: rgba(150, 21, 236, 0.521);
 
   display: grid;
   grid-template-columns: auto auto auto auto;
-  grid-auto-rows: 5rem auto auto;
+  grid-auto-rows: 5rem auto;
   justify-content: center;
 
 }
@@ -230,30 +231,32 @@ width: 16rem;
 /* Contatos */
 
 #Contato{
-margin: 10px;
-padding: 10px;
-
-display: grid;
-grid-template-columns: auto;
-grid-auto-rows: 3rem auto;
+  margin: 10px 10px 0px 10px;
+  padding: 10px;
+  text-align: justify;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-auto-rows: auto auto;
 }
 
 #Contato>h2{
   text-align: center;
+
+  grid-column: 1/-1;
 }
 
 #Cttarea{
   grid-row: 2;
-  grid-column: 1;
-  
+  grid-column: 1/-1;
+  justify-self: center;
 }
 
 #astronauts{
   grid-row: 2;
-  grid-column: 1;
+  grid-column: 2;
   justify-self: center;
   display: grid;
-  width: 35rem;
+  grid-template-columns: auto auto;
 }
 
 #astronautdab{
@@ -269,7 +272,7 @@ grid-auto-rows: 3rem auto;
 
 #astronautyoga{
   grid-row: 2;
-  grid-column: 1;
+  grid-column: 2;
   justify-self: end;
 }
 
@@ -379,57 +382,77 @@ footer > p{
 
 @media only screen and (max-width: 600px){
   
-
   /* sobre mim */
   #sobremim{
-  
+    grid-template-rows: auto auto;
   }
-  #astronaut{
-    
+  #astroplanet{
+    grid-row: 3;
   }
 
 
   /* skills */
 
   #Skills{
-  
-  
-  }
-  
-  #Skills > #texths{
-    
-  }
-  
-  #Skills > #textsf{
-   
-  }
-  
-  
-  #Hardskills{
-    
+  grid-auto-rows: auto;
   }
 
-  #laptop{
-    
+  #tittleskill{
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  #Hardskills{
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  #astronautlap{
+    grid-row: 3;
+    grid-column: 2;
   }
 
   #Softskills{
-    
+    grid-row: 4;
+    grid-column: 2;
   }
 
-  #talk{
-   
+  #astronauttalk{
+  grid-row: 5;
+  grid-column: 2;
   }
 
   /* Contato */
 
-  #Contato{
-  
+#Contato{
+    grid-auto-rows: auto auto auto;
+    grid-column: auto auto;
+    margin: 0;
   }
-    
+  
+#Cttarea{
+    grid-row: 2;
+    columns: 1;
+    z-index: 2;
+  }
 
-#dab{
+#astronauts{
+grid-row: 3;
+grid-column: 1/-1;
+justify-content: center;
+margin: 0;
+z-index: 1;
+
   
 }
+  
+#astronautdab{
+  grid-row: 1;
+  justify-self: center;
+  }
+  
+#astronautyoga{
+  display: none;
+  }
 
 }
