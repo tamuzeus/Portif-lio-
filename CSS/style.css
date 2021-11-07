@@ -51,6 +51,7 @@ nav{
   list-style: none;
   display: flex;
   justify-content: space-around;
+  user-select: none;
 }
 
 .navitens{
@@ -102,7 +103,7 @@ grid-row: 2;
 #buttonarea{
   display: flex;
   justify-content: center;
-  
+  user-select: none;
 }
 
 #saibamais{
