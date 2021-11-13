@@ -250,16 +250,10 @@ width: 16rem;
   justify-self: center;
 }
 
-#square1{
+#square1, #square2, #square3, #square4{
   display: grid;
   justify-self: center;
 }
-
-#square2{
-  display: grid;
-  justify-self: center;
-}
-
 
 .iconsused{
   justify-self: center;
@@ -494,6 +488,15 @@ footer > p{
     grid-column:1;
   }
 
+  #square3{
+    grid-row:4;
+    grid-column:1;
+  }
+
+  #square4{
+    grid-row:5;
+    grid-column:1;
+  }
 
   /* Contato */
 
